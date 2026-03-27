@@ -18,7 +18,7 @@
          <TextField fx:id="cont" layoutX="164.0" layoutY="125.0" promptText="******" />
          <Label layoutX="109.0" layoutY="88.0" text="Usuario:" />
          <Label layoutX="90.0" layoutY="129.0" text="Contraseña:" />
-         <Label fx:id="errorr" layoutX="121.0" layoutY="218.0" text="¡Credenciales incorrectas! Intenta de Nuevo" textFill="#fc0505" />
+         <Label fx:id="errorr" layoutX="121.0" layoutY="218.0" text="¡Credenciales incorrectas! Intenta de Nuevo" textFill="#fc0505" visible="false" />
          <Label layoutX="127.0" layoutY="43.0" text="Bienvenido al Sistema Bancario UTEZ">
             <font>
                <Font name="Bell MT" size="14.0" />
