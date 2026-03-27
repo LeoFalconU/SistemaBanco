@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistemabanco.ConsultarController">
+   <children>
+      <Pane layoutX="57.0" layoutY="26.0" prefHeight="337.0" prefWidth="503.0">
+         <children>
+            <Label layoutX="58.0" layoutY="99.0" text="Buen Día">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="141.0" text="Tu Saldo es de:" />
+            <Label fx:id="usuarioLabel" layoutX="131.0" layoutY="99.0" text="Label">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="saldoLabel" layoutX="152.0" layoutY="142.0" text="Label">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
