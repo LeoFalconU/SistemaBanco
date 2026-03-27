@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.sistemabanco.HelloController">
+<VBox alignment="CENTER" prefHeight="406.0" prefWidth="511.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistemabanco.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+   <Pane prefHeight="274.0" prefWidth="471.0">
+      <children>
+          <Button layoutX="209.0" layoutY="177.0" onAction="#validarAcceso" text="Acceso" />
+      
+          <Label fx:id="welcomeText" prefHeight="17.0" prefWidth="0.0" />
+         <TextField fx:id="usuario" layoutX="164.0" layoutY="84.0" promptText="ejemplo" />
+         <TextField fx:id="cont" layoutX="164.0" layoutY="125.0" promptText="******" />
+         <Label layoutX="109.0" layoutY="88.0" text="Usuario:" />
+         <Label layoutX="90.0" layoutY="129.0" text="Contraseña:" />
+         <Label fx:id="errorr" layoutX="121.0" layoutY="218.0" text="¡Credenciales incorrectas! Intenta de Nuevo" textFill="#fc0505" />
+         <Label layoutX="127.0" layoutY="43.0" text="Bienvenido al Sistema Bancario UTEZ">
+            <font>
+               <Font name="Bell MT" size="14.0" />
+            </font>
+         </Label>
+      </children>
+   </Pane>
 </VBox>
