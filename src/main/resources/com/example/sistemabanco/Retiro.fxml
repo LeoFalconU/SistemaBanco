@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistemabanco.BancoController">
+   <children>
+      <Label layoutX="286.0" layoutY="38.0" text="Retiro">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="218.0" layoutY="77.0" prefHeight="18.0" prefWidth="157.0" text="Cantidad actual" />
+      <Label layoutX="272.0" layoutY="109.0" text="Label" />
+      <TextField layoutX="220.0" layoutY="151.0" promptText="\$00.00" />
+      <Button layoutX="220.0" layoutY="212.0" mnemonicParsing="false" text="Confirmar" />
+      <Button layoutX="318.0" layoutY="212.0" mnemonicParsing="false" text="Cancelar" />
+   </children>
+</AnchorPane>

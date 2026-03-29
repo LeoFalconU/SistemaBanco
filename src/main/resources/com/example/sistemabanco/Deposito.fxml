@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistemabanco.BancoController">
    <children>
       <Label layoutX="237.0" layoutY="31.0" prefHeight="28.0" prefWidth="116.0" text="Depositar">
@@ -12,9 +11,10 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <TextField layoutX="204.0" layoutY="105.0" promptText="\$00000.00" />
+      <TextField fx:id="CantidadDeposito" layoutX="204.0" layoutY="105.0" promptText="\$00000.00" />
       <Label layoutX="217.0" layoutY="77.0" prefHeight="17.0" prefWidth="168.0" text="Cantidad a depopsitar:" />
-      <Button layoutX="197.0" layoutY="163.0" mnemonicParsing="false" text="Confirmar" />
-      <Button layoutX="295.0" layoutY="163.0" mnemonicParsing="false" text="Cancelar" />
+      <Button layoutX="197.0" layoutY="197.0" mnemonicParsing="false" onAction="#DepositoConfirmar" prefHeight="28.0" prefWidth="70.0" text="Confirmar" />
+      <Button fx:id="CancelarDeposito" layoutX="295.0" layoutY="198.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="62.0" text="Cancelar" />
+      <Label fx:id="AvisoDeposito" layoutX="253.0" layoutY="155.0" text="Label" />
    </children>
 </AnchorPane>
