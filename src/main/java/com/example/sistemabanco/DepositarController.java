@@ -14,25 +14,24 @@ public class DepositarController {
     @FXML
     protected TextField CantidadRetiro;
 
+    @FXML private TextField txtMonto;
+    @FXML private Label lblMensaje;
+
     @FXML
-    protected void DepositoConfirmar(){
-        double deposito;
-        double saldo=0;
-        deposito = Double.parseDouble(CantidadDeposito.getText());
-        saldo = saldo + deposito;
-        CantidadDeposito.setText(String.valueOf(deposito));
-        AvisoDeposito.setText(("Deposito realizado :)"));
-        Saldo.setText(String.valueOf(saldo));
-    }
-    @FXML
-    protected void CancelarDeposito(){
-        CantidadDeposito.setText("");
-        AvisoDeposito.setText("Deposito Cancelado");
-    }
-    @FXML
-    protected void RetiroConfirmar(){
-        double retiro;
-        retiro = Double.parseDouble(CantidadRetiro.getText());
-        CantidadRetiro.setText(String.valueOf(retiro));
+    private void DepositoConfirmar() {
+        try {
+            double monto = Double.parseDouble(CantidadDeposito.getText().trim());
+            if (monto <= 0) { AvisoDeposito.setText(" Ingresa una cantidad válida.");
+                return;
+            }
+            MainApp.cuentaActual.depositar(monto);
+            AvisoDeposito.setStyle("-fx-text-fill: green;");
+            AvisoDeposito.setText("✅ Depósito exitoso. Saldo: $" +
+                    String.format("%.2f", MainApp.cuentaActual.getSaldo()));
+            CantidadDeposito.clear();
+        } catch (NumberFormatException e) {
+            AvisoDeposito.setStyle("-fx-text-fill: red;");
+            AvisoDeposito.setText("⚠ Ingresa un número válido.");
+        }
     }
 }
