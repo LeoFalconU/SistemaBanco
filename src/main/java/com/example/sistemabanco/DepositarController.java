@@ -24,10 +24,10 @@ public class DepositarController {
             if (monto <= 0) { AvisoDeposito.setText(" Ingresa una cantidad válida.");
                 return;
             }
-            MainApp.cuentaActual.depositar(monto);
+            MainController.cuentaActual.depositar(monto);
             AvisoDeposito.setStyle("-fx-text-fill: green;");
             AvisoDeposito.setText("✅ Depósito exitoso. Saldo: $" +
-                    String.format("%.2f", MainApp.cuentaActual.getSaldo()));
+                    String.format("%.2f", MainController.cuentaActual.getSaldo()));
             CantidadDeposito.clear();
         } catch (NumberFormatException e) {
             AvisoDeposito.setStyle("-fx-text-fill: red;");

@@ -13,6 +13,7 @@ public class ConsultarController {
 
     @FXML
     public void initialize() {
-        usuarioLabel.setText();
+        usuarioLabel.setText(MainController.cuentaActual.getUsuario());
+        saldoLabel.setText(String.format("%.2f", MainController.cuentaActual.getSaldo()));
     }
 }
