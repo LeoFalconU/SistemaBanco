@@ -23,7 +23,7 @@ public class HelloController {
         String user = usuario.getText();
         String passwd = cont.getText();
 
-        if (user.equals("admin") && passwd.equals("admin123") ) {
+        if (user.equals(MainController.cuentaActual.getUsuario()) && passwd.equals(MainController.cuentaActual.getContrasena())) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu.fxml"));
                 Parent root = loader.load();

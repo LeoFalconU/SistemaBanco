@@ -1,6 +1,7 @@
 package com.example.sistemabanco;
 
 import javafx.fxml.FXML;
+import com.example.sistemabanco.MainController;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
@@ -22,21 +23,23 @@ public class RetiroController {
 
     @FXML
     private void Confirmar(){
+        saldoLabel.setText(String.format("%.2f", MainController.cuentaActual.getSaldo()));
         try{
-            saldoLabel.setText(String.format("%.2f", MainController.cuentaActual.getSaldo()));
+
             double montoIngresado = Double.parseDouble(monto.getText());
             if (montoIngresado<=0){
                 errorr.setVisible(true);
-
+                return;
+                }
                 boolean valido = MainController.cuentaActual.retirar(montoIngresado);
             if (valido) {
                 mensajeSaldo.setVisible(true);
                 nuevoSaldo.setVisible(true);
-                nuevoSaldo.setText(Double.toString(MainController.cuentaActual.getSaldo()));
+                nuevoSaldo.setText(String.format("%.2f", MainController.cuentaActual.getSaldo()));
             } else{
                 saldoNo.setVisible(true);
             }
-            }
+
 
         } catch (NumberFormatException e) {
             throw new RuntimeException(e);

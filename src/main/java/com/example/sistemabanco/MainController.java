@@ -1,12 +1,13 @@
 package com.example.sistemabanco;
 
+import com.example.sistemabanco.Cuenta;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class MainController extends Application {
-    public static Cuenta cuentaActual = new Cuenta("admin", "1234", 5000.0);
+    public static Cuenta cuentaActual = new Cuenta("admin", "admin1234", 5000.0);
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
