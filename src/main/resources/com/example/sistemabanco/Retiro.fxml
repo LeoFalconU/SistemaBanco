@@ -4,17 +4,30 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistemabanco.RetiroController">
+<AnchorPane fx:id="aMenu" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistemabanco.RetiroController">
    <children>
       <Label layoutX="286.0" layoutY="38.0" text="Retiro">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label layoutX="218.0" layoutY="77.0" prefHeight="18.0" prefWidth="157.0" text="Cantidad actual" />
-      <Label layoutX="272.0" layoutY="109.0" text="Label" />
-      <TextField layoutX="220.0" layoutY="151.0" promptText="\$00.00" />
-      <Button layoutX="220.0" layoutY="212.0" mnemonicParsing="false" text="Confirmar" />
-      <Button layoutX="318.0" layoutY="212.0" mnemonicParsing="false" text="Cancelar" />
+      <Label layoutX="218.0" layoutY="77.0" prefHeight="18.0" prefWidth="91.0" text="Cantidad actual" />
+      <Label fx:id="saldoLabel" layoutX="322.0" layoutY="77.0" text="Label" />
+      <TextField fx:id="monto" layoutX="225.0" layoutY="118.0" promptText="\$00.00" />
+      <Button fx:id="Confirmar" layoutX="218.0" layoutY="257.0" mnemonicParsing="false" text="Confirmar" />
+      <Button fx:id="Cancelar" layoutX="319.0" layoutY="257.0" mnemonicParsing="false" text="Cancelar" />
+      <Button layoutX="274.0" layoutY="300.0" mnemonicParsing="false" onAction="#aMenu" text="Regresar" />
+      <Label fx:id="mensajeSaldo" layoutX="167.0" layoutY="162.0" text="Tu nuevo saldo es de:" />
+      <Label fx:id="nuevoSaldo" layoutX="305.0" layoutY="162.0" text="Label" />
+      <Label fx:id="errorr" layoutX="219.0" layoutY="215.0" text="Ingresa una Cantidad Valida" textFill="#f20404" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="saldoNo" layoutX="253.0" layoutY="191.0" text="Saldo Insuficiente" textFill="#ef0505" visible="false">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

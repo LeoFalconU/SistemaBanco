@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistemabanco.ConsultarController">
    <children>
       <Pane layoutX="57.0" layoutY="26.0" prefHeight="337.0" prefWidth="503.0">
@@ -25,6 +24,7 @@
                   <Font name="Arial" size="12.0" />
                </font>
             </Label>
+            <Button layoutX="226.0" layoutY="238.0" mnemonicParsing="false" onAction="#aMenu" text="Regresar" />
          </children>
       </Pane>
    </children>

@@ -56,16 +56,7 @@ public class MenuController {
     }
     @FXML
     protected void Salir(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Salir.fxml"));
-            Parent root = loader.load();
-
-            Stage stage = new Stage();
-            stage.setTitle("Retirar");
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
+        System.exit(0);
         }
     }
-}
+

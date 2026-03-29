@@ -2,6 +2,8 @@ package com.example.sistemabanco;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+
 
 public class ConsultarController {
 
@@ -15,5 +17,10 @@ public class ConsultarController {
     public void initialize() {
         usuarioLabel.setText(MainController.cuentaActual.getUsuario());
         saldoLabel.setText(String.format("%.2f", MainController.cuentaActual.getSaldo()));
+    }
+    @FXML
+    public void aMenu() {
+        Stage stage = (Stage) saldoLabel.getScene().getWindow();
+        stage.close();
     }
 }
