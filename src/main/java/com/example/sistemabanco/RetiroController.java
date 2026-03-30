@@ -20,10 +20,18 @@ public class RetiroController {
     private TextField monto;
     @FXML
     private Label errorr;
+    @FXML
+    private Label cantidadLabel;
+
+    @FXML
+    public void initialize(){
+        saldoLabel.setText(String.format("%.2f", MainController.cuentaActual.getSaldo()));
+        cantidadLabel.setVisible(true);
+    }
 
     @FXML
     private void Confirmar(){
-        saldoLabel.setText(String.format("%.2f", MainController.cuentaActual.getSaldo()));
+
         try{
 
             double montoIngresado = Double.parseDouble(monto.getText());

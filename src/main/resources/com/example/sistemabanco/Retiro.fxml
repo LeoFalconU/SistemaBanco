@@ -11,7 +11,7 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <Label layoutX="218.0" layoutY="77.0" prefHeight="18.0" prefWidth="91.0" text="Cantidad actual" />
+      <Label fx:id="cantidadLabel" layoutX="218.0" layoutY="77.0" prefHeight="18.0" prefWidth="91.0" text="Cantidad actual" />
       <Label fx:id="saldoLabel" layoutX="322.0" layoutY="77.0" text="Label" />
       <TextField fx:id="monto" layoutX="225.0" layoutY="118.0" promptText="\$00.00" />
       <Button fx:id="Confirmar" layoutX="218.0" layoutY="257.0" mnemonicParsing="false" text="Confirmar" />
@@ -29,5 +29,6 @@
             <Font name="System Italic" size="12.0" />
          </font>
       </Label>
+      <Label layoutX="73.0" layoutY="122.0" text="Ingresa el Monto de Retiro:" />
    </children>
 </AnchorPane>
