@@ -25,12 +25,16 @@ public class RetiroController {
 
     @FXML
     public void initialize(){
-        saldoLabel.setText(String.format("%.2f", MainController.cuentaActual.getSaldo()));
+        saldoLabel.setText(String.format("%.2f",MainController.cuentaActual.getSaldo()));
         cantidadLabel.setVisible(true);
     }
 
     @FXML
     private void Confirmar(){
+        errorr.setVisible(false);
+        saldoNo.setVisible(false);
+        mensajeSaldo.setVisible(false);
+        nuevoSaldo.setVisible(false);
 
         try{
 
@@ -43,7 +47,9 @@ public class RetiroController {
             if (valido) {
                 mensajeSaldo.setVisible(true);
                 nuevoSaldo.setVisible(true);
-                nuevoSaldo.setText(String.format("%.2f", MainController.cuentaActual.getSaldo()));
+                nuevoSaldo.setText(String.format("%.2f",MainController.cuentaActual.getSaldo()));
+                saldoLabel.setText(String.format("%.2f",MainController.cuentaActual.getSaldo()));
+                monto.clear();
             } else{
                 saldoNo.setVisible(true);
             }
@@ -58,5 +64,6 @@ public class RetiroController {
         Stage stage = (Stage) saldoLabel.getScene().getWindow();
         stage.close();
     }
+
 
 }
