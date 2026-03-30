@@ -3,6 +3,7 @@ package com.example.sistemabanco;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 public class DepositarController {
     @FXML
@@ -16,6 +17,8 @@ public class DepositarController {
 
     @FXML private TextField txtMonto;
     @FXML private Label lblMensaje;
+
+
 
     @FXML
     private void DepositoConfirmar() {
@@ -33,5 +36,10 @@ public class DepositarController {
             AvisoDeposito.setStyle("-fx-text-fill: red;");
             AvisoDeposito.setText("⚠ Ingresa un número válido.");
         }
+    }
+    @FXML
+    public void aMenu() {
+        Stage stage = (Stage)AvisoDeposito.getScene().getWindow();
+        stage.close();
     }
 }
